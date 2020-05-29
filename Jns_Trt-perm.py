@@ -1,5 +1,5 @@
-import re
-def do_input_int(message):
+import re             
+def do_input_int(message):         #функція для вводу чисел типу int, котра видає помилку коли вводиться інше значення
     flag = True
     while flag:
         value = input(message)
@@ -9,7 +9,7 @@ def do_input_int(message):
         else:
             print('error')
     return value
-def is_int(message,error):
+def is_int(message,error):       # Функція котра перевіряє чи число є типу int
     flag=True
     while flag:
         a=input(message)
@@ -21,7 +21,7 @@ def is_int(message,error):
     return a
 
 
-def getmobile():
+def getmobile():       # Функція котра вибирає,яке число буде мобільним
     global k, iList
     ret = False
     j = 0
@@ -38,7 +38,7 @@ def getmobile():
     return ret
 
 
-def swap():
+def swap():      #Функція, яка змінює місцями мобільне число з сусіднім
     global k, iList
     dir = iList[k][1]
     tmp = iList[k + dir]
@@ -46,14 +46,14 @@ def swap():
     iList[k] = tmp
 
 
-def reverse():
+def reverse():      #Функція, яка змінює напрямок мобільного числа при досягненні краю
     global k, iList
     for i in range(len(iList)):
         if iList[i][0] > iList[k][0]:
             iList[i][1] *= -1
 
 
-def write_list():
+def write_list():    #Функція яка друкує ряд з чисел
     global n, iList
     for i in range(len(iList)):
         print(iList[i][0], end="")
@@ -61,7 +61,7 @@ def write_list():
     n += 1
 
 stop = ''
-while stop != 'stop':
+while stop != 'stop':     #Програма заведена під цикл який завершує свою роботу при написанні stop
     sMyList = []
     p=do_input_int("Введіть кількість чисел для перестановки:")
     for i in range(1,p+1):
