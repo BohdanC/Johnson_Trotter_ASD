@@ -1,3 +1,9 @@
+#Джерело запозичення https://github.com/deinonychus/Johnson-Trotter-Perm/blob/master/Johnson-Trotter-Perm.py
+
+
+
+
+
 import re             
 def do_input_int(message):         #функція для вводу чисел типу int, котра видає помилку коли вводиться інше значення
     flag = True
